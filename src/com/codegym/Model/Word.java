@@ -41,9 +41,9 @@ public class Word {
     @Override
     public String toString() {
         return "{" +
-                "translate='" + translate + '\'' +
-                ", params='" + params + '\'' +
-                ", keyword='" + keyword + '\'' +
+                "translate : '" + translate + '\'' +
+                ", params : '" + params + '\'' +
+                ", keyword : '" + keyword + '\'' +
                 '}';
     }
 }

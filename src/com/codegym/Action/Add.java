@@ -1,7 +1,6 @@
 package com.codegym.Action;
 
 import com.codegym.Model.Word;
-import com.codegym.ReadWrite.Read.Read;
 import com.codegym.ReadWrite.Write.Write;
 
 import java.io.IOException;
@@ -13,11 +12,11 @@ public class Add {
         String a, b, c;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Input Key : ");
+        System.out.println("Input Word : ");
         String key = sc.nextLine();
         System.out.println("Input Translate : ");
         a = sc.nextLine();
-        System.out.println("Input params : ");
+        System.out.println("Input Dictionary : ");
         b = sc.nextLine();
         System.out.println("Input Active : ");
         c = sc.nextLine();
