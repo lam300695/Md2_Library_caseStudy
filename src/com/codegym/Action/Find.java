@@ -1,11 +1,13 @@
 package com.codegym.Action;
 
+import com.codegym.Model.Word;
+
 import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Find {
-    public static void find(HashMap<String, String> map) {
+    public static void find(HashMap<String, Word> map) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap tu can tim kiem : ");
         String find = sc.nextLine();
@@ -13,8 +15,8 @@ public class Find {
         Set<String> keys = map.keySet();
         List<String> listOfKeys = new ArrayList<String>(keys);
 
-        Collection<String> values = map.values();
-        List<String> listOfValues = new ArrayList<String>(values);
+        Collection<Word> values = map.values();
+        List<Word> listOfValues = new ArrayList<Word>(values);
 
         String regex = ".*" + find + ".*";
         Pattern pattern = Pattern.compile(regex);

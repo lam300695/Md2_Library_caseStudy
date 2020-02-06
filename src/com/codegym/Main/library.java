@@ -4,9 +4,8 @@ import com.codegym.Action.Add;
 import com.codegym.Action.Find;
 import com.codegym.Action.Remove;
 import com.codegym.Action.Repair;
-import com.codegym.ReadWrite.Read.Read;
+import com.codegym.Model.Word;
 
-import javax.print.attribute.standard.Fidelity;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.InputMismatchException;
@@ -15,7 +14,7 @@ import java.util.Scanner;
 public class library {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        HashMap<String, String> map = new HashMap();
+        HashMap<String, Word> map = new HashMap();
 
         try {
             while (0 == 0) {

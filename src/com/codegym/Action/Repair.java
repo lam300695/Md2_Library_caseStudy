@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class Repair {
-    public static void repair(HashMap<String, String> map){
+    public static void repair(HashMap<String, Word> map){
         Scanner sc = new Scanner(System.in);
         System.out.println("Chon tu can sua : ");
         String key = sc.nextLine();
@@ -19,8 +19,8 @@ public class Repair {
         System.out.println("Input Active : ");
         String c = sc.nextLine();
 
-        Set<Map.Entry<String, String>> setMap = map.entrySet();
+        Set<Map.Entry<String, Word>> setMap = map.entrySet();
         System.out.println(setMap);
-        map.replace(key, String.valueOf(new Word(a, b, c)));
+        map.replace(key, new Word(a, b, c));
     }
 }

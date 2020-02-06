@@ -42,8 +42,8 @@ public class Word {
     public String toString() {
         return "{" +
                 "translate : '" + translate + '\'' +
-                ", params : '" + params + '\'' +
-                ", keyword : '" + keyword + '\'' +
+                ", Dictionary : '" + params + '\'' +
+                ", active : '" + keyword + '\'' +
                 '}';
     }
 }
