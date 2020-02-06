@@ -24,6 +24,7 @@ public class library {
             System.out.println("2.Xoa tu");
             System.out.println("3.In Map");
             System.out.println("4.Tim kiem tu");
+            System.out.println("5.Dung chuong trinh");
             System.out.println("Nhap lua chon : ");
             select = sc.nextInt();
             switch (select) {
@@ -40,6 +41,8 @@ public class library {
                 case 4:
                     Find.find(map);
                     break;
+                case 5:
+                    System.exit(0);
             }
         }
     }
