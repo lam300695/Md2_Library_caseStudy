@@ -54,7 +54,7 @@ public class library {
                 }
             }
         } catch (InputMismatchException e) {
-            System.out.println("nhap sai");
+            System.out.println("nhap sai" + e);
         }
     }
 }

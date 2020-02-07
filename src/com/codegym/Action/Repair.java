@@ -1,6 +1,7 @@
 package com.codegym.Action;
 
 import com.codegym.Model.Word;
+import com.codegym.ReadWrite.Write.Write;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -19,8 +20,10 @@ public class Repair {
         System.out.println("Input Active : ");
         String c = sc.nextLine();
 
-        Set<Map.Entry<String, Word>> setMap = map.entrySet();
-        System.out.println(setMap);
         map.replace(key, new Word(a, b, c));
+        System.out.println("Sua tu " + key + " Success!");
+        Write.write(map);
+        System.out.println();
+        System.out.println(map);
     }
 }
