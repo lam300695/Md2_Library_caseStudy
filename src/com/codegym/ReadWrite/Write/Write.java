@@ -12,7 +12,14 @@ public class Write {
         try {
             File f = new File("/home/lam/data3.txt");
             FileWriter fw = new FileWriter(f);
-            fw.write(String.valueOf(map));
+            map.forEach((keyInt, valueInt) -> {
+                try {
+                    fw.write(keyInt  + " : " + valueInt + "\r\n" );
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            });
+
             fw.close();
         } catch (IOException e) {
             System.out.println("Loi ghi file: " + e);

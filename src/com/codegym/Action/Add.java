@@ -10,22 +10,22 @@ import java.util.Scanner;
 
 public class Add {
     public static void put(HashMap<String, Word> map) throws IOException {
-        String a, b, c;
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("Input Key : ");
+        System.out.println("Them tu : ");
         String key = sc.nextLine();
         System.out.println("Input Translate : ");
-        a = sc.nextLine();
+        String a = sc.nextLine();
         System.out.println("Input Dictionary : ");
-        b = sc.nextLine();
+        String b = sc.nextLine();
         System.out.println("Input Active : ");
-        c = sc.nextLine();
+        String c = sc.nextLine();
 
         map.put(key, new Word(a, b, c));
         System.out.println("Them tu " + key + " Success!");
         Write.write(map);
         System.out.println();
-        System.out.println(map);
+//        System.out.println("Các entry có trong hashMap là: ");
+//        map.forEach((keyInt, valueInt) -> System.out.println(
+//                keyInt + " : "  + valueInt));
     }
 }

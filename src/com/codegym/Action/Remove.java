@@ -16,7 +16,15 @@ public class Remove {
         map.remove(key);
         System.out.println("Xoa tu " + key + " Success!");
         Write.write(map);
-        System.out.println();
-        System.out.println(map);
+//        System.out.println();
+//        System.out.println(map);
     }
+
+//    public static class ListMap {
+//        public static void listMap(HashMap<String ,Word>map){
+//            System.out.println("Các entry có trong hashMap là: ");
+//            map.forEach((keyInt, valueInt) -> System.out.println(
+//                    keyInt + " = "  + valueInt));
+//        }
+//    }
 }

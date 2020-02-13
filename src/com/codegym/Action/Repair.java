@@ -23,7 +23,7 @@ public class Repair {
         map.replace(key, new Word(a, b, c));
         System.out.println("Sua tu " + key + " Success!");
         Write.write(map);
-        System.out.println();
-        System.out.println(map);
+//        System.out.println();
+//        System.out.println(map);
     }
 }

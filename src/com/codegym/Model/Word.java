@@ -2,16 +2,16 @@ package com.codegym.Model;
 
 public class Word {
     private String translate;
-    private String params;
-    private String keyword;
+    private String describe;
+    private String adjective;
 
     public Word() {
     }
 
     public Word(String translate, String params, String keyword) {
         this.translate = translate;
-        this.params = params;
-        this.keyword = keyword;
+        this.describe = params;
+        this.adjective = keyword;
     }
 
     public String getTranslate() {
@@ -23,27 +23,27 @@ public class Word {
     }
 
     public String getParams() {
-        return params;
+        return describe;
     }
 
     public void setParams(String params) {
-        this.params = params;
+        this.describe = params;
     }
 
     public String getKeyword() {
-        return keyword;
+        return adjective;
     }
 
     public void setKeyword(String keyword) {
-        this.keyword = keyword;
+        this.adjective = keyword;
     }
 
     @Override
     public String toString() {
-        return "{" +
-                "translate : '" + translate + '\'' +
-                ", Dictionary : '" + params + '\'' +
-                ", active : '" + keyword + '\'' +
-                '}';
+        return
+                 translate + "," +
+                 describe + "," +
+                 adjective  ;
     }
 }
+

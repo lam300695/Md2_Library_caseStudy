@@ -29,6 +29,7 @@ public class Find {
         }
         System.out.println("Ban muon tim tu nao : ");
         String find2 = sc.nextLine();
+        System.out.println("Translate to " + find2 + " is : ");
         for (int i = 0; i < listOfKeys.size(); i++) {
             if (listOfKeys.get(i).equals(find2)) {
                 System.out.println(listOfKeys.get(i) + " : " + listOfValues.get(i));
