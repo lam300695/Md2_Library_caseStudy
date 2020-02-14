@@ -2,45 +2,17 @@ package com.codegym.Main;
 
 import com.codegym.Action.*;
 import com.codegym.Model.Word;
+import com.codegym.ReadWrite.Read.ReadStart;
 
-import java.io.*;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class library {
-    public static void main(String[] args) throws IOException {
+public class Translate {
+    public static void main(String[] args)  {
         Scanner sc = new Scanner(System.in);
         HashMap<String, Word> map = new HashMap();
-
-        try {
-            File f = new File("/home/lam/data3.txt");
-            FileReader fr = new FileReader(f);
-            BufferedReader br = new BufferedReader(fr);
-            String line;
-            while ((line = br.readLine()) != null) {
-                String[] word = line.split(" : ");
-                String key = word[0];
-                String [] word1 = word[1].split(",");
-                Word w1 = new Word(word1[0], word1[1], word1[2]);
-                map.put(key, w1);
-//                System.out.println(map);
-//                System.out.println(line);
-            }
-            System.out.println("List word : ");
-            map.forEach((keyInt, valueInt) -> System.out.printf(
-                    keyInt + " : "  + valueInt + "\r\n" ));
-            fr.close();
-            br.close();
-        } catch (FileNotFoundException e) {
-            System.out.println("Loi doc file: " + e);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ArrayIndexOutOfBoundsException e) {
-            e.printStackTrace();
-        }
-
+        ReadStart.readStart(map);
         try {
             while (0 == 0) {
                 int select = 0;
@@ -57,19 +29,24 @@ public class library {
                 select = sc.nextInt();
                 switch (select) {
                     case 1:
-                        Add.put(map);
+                        Add add = new Add();
+                        add.addWord(map);
                         break;
                     case 2:
-                        Remove.remove(map);
+                        Remove remove = new Remove();
+                        remove.removeWord(map);
                         break;
                     case 3:
-                        Repair.repair(map);
+                        Repair repair = new Repair();
+                        repair.repaintWord(map);
                         break;
                     case 4:
-                        PrintList.printList(map);
+                        PrintList printList = new PrintList();
+                        printList.printWord(map);
                         break;
                     case 5:
-                        Find.find(map);
+                       Find find = new Find();
+                       find.findWord(map);
                         break;
                     case 6:
                         System.exit(0);
